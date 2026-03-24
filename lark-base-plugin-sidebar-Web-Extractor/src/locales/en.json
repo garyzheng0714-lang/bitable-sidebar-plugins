@@ -1,0 +1,58 @@
+{
+  "label": {
+    "base": "Table",
+    "view": "View",
+    "field": "Field",
+    "current": "Current selected cell data"
+  },
+  "placeholder": {
+    "base": "Select a table",
+    "view": "Select a view",
+    "field": "Select a field",
+    "url": "Enter the page URL to extract",
+    "outputField": "Select a text field as output",
+    "linkField": "Select link source (Text/Formula/URL)",
+    "titleField": "Select a text field for ranking name",
+    "productsField": "Select a text field for products list"
+  },
+  "btn": {
+    "extract": "Extract Content",
+    "run": "Update Entire View"
+  },
+  "label": {
+    "base": "Table",
+    "view": "View",
+    "field": "Field",
+    "current": "Current selected cell data",
+    "extractor": "Page Extractor",
+    "pageTitle": "Page Title",
+    "products": "Products",
+    "linkField": "Link Field",
+    "outputField": "Output Field",
+    "titleField": "Ranking Name Field",
+    "productsField": "Products Field"
+  },
+  "column": {
+    "name": "Product Name",
+    "reviews": "Review Count"
+  },
+  "msg": {
+    "invalidUrl": "Please enter a valid http/https URL",
+    "fetchError": "Failed to fetch the page. Please try again.",
+    "needOutputField": "Please select an output field first",
+    "noRecords": "No records to update in current view",
+    "noUrlField": "Please select a link field",
+    "needTitleField": "Please select ranking name field",
+    "needProductsField": "Please select products field",
+    "runFailed": "Batch update failed. Please try again later",
+    "outputFieldTextOnly": "Output field must be Text type",
+    "titleFieldTextOnly": "Ranking name field must be Text type",
+    "productsFieldTextOnly": "Products field must be Text type"
+  },
+  "hint": {
+    "noProducts": "No product info found. Showing page title only.",
+    "urlFieldAuto": "Link field is auto-detected. No manual selection needed.",
+    "noUrlField": "Ensure a text field in view contains http/https links",
+    "sublistComma": "If multiple sublists, use new lines (one per [name](link))."
+  }
+}

@@ -1,0 +1,30 @@
+@import 'reset-css';
+
+:root {
+  --space-xs: 6px;
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-l: 16px;
+  --border-color: var(--el-border-color-lighter, #e5e7eb);
+  --text-weak: #6b7280;
+  --bg-muted: #fafafa;
+}
+
+/* 字体与排版（遵循 Base 设计规范） */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 顶部模块选择：简约清晰 */
+.app-tabs .el-tabs__header { margin: 0 0 var(--space-m) 0; }
+.app-tabs .el-tabs__item { font-size: 13px; font-weight: 500; }
+.app-tabs .el-tabs__content { padding-top: 0; }
+
+/* 统一提示与弱文本颜色 */
+.hint { color: var(--text-weak); font-size: 12px; }
+.hint.small { font-size: 12px; }
+
+/* 通用小组件间距（垂直布局） */
+.section { gap: var(--space-m); }

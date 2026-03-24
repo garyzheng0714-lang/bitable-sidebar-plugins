@@ -1,0 +1,54 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Install server dependencies
+        working-directory: server
+        run: npm ci
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          DEPLOY_PATH: /opt/poster-generator
+        run: |
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='server/node_modules' \
+            --exclude='.env' \
+            --exclude='data/' \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            ./ root@${SERVER_HOST}:${DEPLOY_PATH}/
+
+          ssh -i ~/.ssh/deploy_key root@${SERVER_HOST} << 'REMOTE'
+            cd /opt/poster-generator/server
+            npm ci --omit=dev
+            cd /opt/poster-generator
+            pm2 describe poster-generator > /dev/null 2>&1 && pm2 restart poster-generator || pm2 start ecosystem.config.cjs
+            pm2 save
+          REMOTE

@@ -1,0 +1,62 @@
+/* 全局主题变量 */
+:root {
+  --bg: #ffffff; /* 由原 #f7f8fa 改为纯白，消除与横幅的色差 */
+  --text-strong: #1f2329; /* N900 */
+  --text-secondary: #4e5969; /* N600 */
+  --text-tertiary: #86909c; /* N500 */
+  --border: #ebeef5; /* N300 */
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-strong);
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+* { box-sizing: border-box; }
+
+a { color: #3370ff; }
+
+/* 小弹窗弱化遮罩 */
+.ant-modal-root .ant-modal-mask { background-color: rgba(0,0,0,0.12) !important; }
+/* 小弹窗尺寸与圆角、留白 */
+.ant-modal { border-radius: 10px; }
+.ant-modal .ant-modal-header { padding: 12px 16px; }
+.ant-modal .ant-modal-body { padding: 16px; }
+.ant-modal .ant-modal-title { font-size: 14px; font-weight: 500; color: var(--text-strong); }
+
+/* 进度条更柔和的线宽与圆角（组件内已设 strokeWidth，统一圆角与中性配色） */
+.ant-progress-inner { border-radius: 999px; background: #ebeef5; }
+.ant-progress-bg { border-radius: 999px; background: #4e5969; height: 6px; }
+
+/* 扁平化：去卡片边框与阴影，打造“官方一体化”容器 */
+.ant-card, .ant-card-bordered, .ant-card-small, .ant-card .ant-card-head, .ant-card .ant-card-body {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+.ant-card-head { border-bottom: 1px solid var(--border); }
+
+/* 横幅与内容更舒展的一体化视觉：内容区顶部安全距离 */
+.ant-layout .ant-layout-content { padding-top: 24px !important; }
+
+/* 文本与控件颜色统一中性 */
+.ant-typography, label, .ant-form-item-label > label, .ant-select, .ant-input { color: var(--text-strong); }
+
+/* 修复 Header 溢出与文字重叠：让 Header 自适应高度 */
+.ant-layout-header {
+  height: auto !important;
+  line-height: normal !important;
+  padding: 0 !important;
+}
+
+/* 顶部工具栏与列内同行布局的响应式规则 */
+.selector-toolbar { flex-wrap: wrap; margin-bottom: 8px; }
+@media (min-width: 992px) {
+  .selector-toolbar { flex-wrap: nowrap; }
+}
+.col-row { flex-wrap: wrap; }
+@media (min-width: 992px) {
+  .col-row { flex-wrap: nowrap; }
+}
