@@ -8,12 +8,12 @@
 
 | 项目 | 说明 | 技术栈 |
 |------|------|--------|
-| [lark-base-plugin-sidebar-text-to-table-image](./lark-base-plugin-sidebar-text-to-table-image/) | 文字转表格图片，将文本字段中的结构化数据渲染为表格图片并上传至云存储 | React + TypeScript |
+| [lark-base-plugin-sidebar-text-to-table-image](./lark-base-plugin-sidebar-text-to-table-image/) | 文字转表格图片，将文本字段中的结构化数据渲染为表格图片并上传至云存储 | Vue 3 + Element Plus |
 | [lark-base-plugin-sidebar-Web-Extractor](./lark-base-plugin-sidebar-Web-Extractor/) | 网页正文提取器，支持 Amazon 畅销榜结构化解析，批量提取写入 | Vue 3 + Element Plus |
 | [lark-base-plugin-sidebar-multi-link-to-attachment](./lark-base-plugin-sidebar-multi-link-to-attachment/) | 链接批量转附件，多组字段映射、分隔符拆分、追加/覆盖模式 | React 18 + Ant Design 5 |
-| [lark-base-plugin-sidebar-row-to-document](./lark-base-plugin-sidebar-row-to-document/) | 根据行记录生成文档 | - |
-| [feishu-md5-encrypt-plugin](./feishu-md5-encrypt-plugin/) | MD5 加密插件，对表格数据进行 MD5 哈希 | - |
-| [bitable-poster-generator](./bitable-poster-generator/) | 海报批量生成器，从表格数据批量生成海报 | React + TypeScript + Vite |
+| [lark-base-plugin-sidebar-row-to-document](./lark-base-plugin-sidebar-row-to-document/) | Word 模板套版插件，上传 Word 模板、映射字段、批量渲染输出文档 | Vue 3 + Element Plus + docxtemplater |
+| [feishu-md5-encrypt-plugin](./feishu-md5-encrypt-plugin/) | 加密助手，支持 MD5/SHA-1/SHA-256/SHA-512/SM3/Base64/HMAC-SHA256 批量处理 | React 18 + TypeScript |
+| [bitable-poster-generator](./bitable-poster-generator/) | 海报批量生成器，基于画布编辑器从表格数据批量生成海报 | React 19 + Semi Design + Fabric.js + Express |
 
 ## 与字段捷径的区别
 
