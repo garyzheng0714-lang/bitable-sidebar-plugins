@@ -1,10 +1,18 @@
-# 飞书多维表格边栏插件合集
+# bitable-sidebar-plugins
 
-> Feishu / Lark Bitable sidebar plugin collection
+![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E9%A3%9E%E4%B9%A6%E8%BE%B9%E6%A0%8F%E6%8F%92%E4%BB%B6-2563eb?style=flat-square)
+![技术栈](https://img.shields.io/badge/%E6%8A%80%E6%9C%AF%E6%A0%88-TypeScript%20Node.js-0f766e?style=flat-square)
+![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E6%8F%92%E4%BB%B6%E5%90%88%E9%9B%86-16a34a?style=flat-square)
+![README](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-brightgreen?style=flat-square)
 
-本仓库集中维护多个飞书多维表格边栏插件。边栏插件以 iframe 形式运行在多维表格侧边栏中，通常提供完整前端界面，适合批量处理、人工配置、预览编辑和多步骤工作流。
+飞书插件：集中维护飞书多维表格边栏插件，服务批量处理、预览编辑、文档生成、加密编码和海报生成等场景。
 
-字段捷径合集请见：[bitable-field-shortcuts](https://github.com/garyzheng0714-lang/bitable-field-shortcuts)。
+## 仓库定位
+
+- 分类：飞书多维表格边栏插件 / 插件合集。
+- 面向对象：需要在多维表格侧边栏中提供完整 UI、人工确认、批量处理或多步骤操作的内部工具开发者。
+- 运行宿主：飞书多维表格侧边栏 iframe 插件。
+- 与字段捷径的区别：本仓库维护“边栏插件”，通常有完整前端界面；字段捷径合集请见 [bitable-field-shortcuts](https://github.com/garyzheng0714-lang/bitable-field-shortcuts)。
 
 ## 插件目录
 
